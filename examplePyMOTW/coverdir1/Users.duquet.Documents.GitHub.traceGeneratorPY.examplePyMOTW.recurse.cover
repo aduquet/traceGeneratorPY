@@ -1,0 +1,10 @@
+       
+       
+    3: def recurse(level):
+    9:     print ('recurse(%s)' % level)
+    9:     if level:
+    6:         recurse(level-1)
+    9:     return
+       
+    3: def not_called():
+           print ('This function is never called.')
