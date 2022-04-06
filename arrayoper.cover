@@ -1,0 +1,67 @@
+    1: from ast import Return
+    1: from sympy import false, true
+       
+       
+    2: class Array_oper(object):
+           
+    1:     def __init__(self, a, b):
+    1:         self.array_a = a 
+    1:         self.array_b = b
+               
+    1:     def printArray(self):
+    1:         print(self.array_a, '\n')
+    1:         print(self.array_b, '\n')
+               
+    1:     def add(self):
+               
+    1:         if self.equalSize():
+                   sum = [x + y for x, y in zip(self.array_a, self.array_b)]
+                   return sum
+               else:
+    1:             return 'arrays must have the same size'
+               
+    1:     def sub(self):
+               
+    1:         if self.equalSize():
+                   diff = [x - y for x, y in zip(self.array_a, self.array_b)]
+                   
+                   return diff
+               else:
+    1:             return 'arrays must have the same size'
+               
+    1:     def dot_product(self):
+    1:         dp = 0
+    1:         if self.equalSize():
+                   for i in range(len(self.array_a)):
+                       dp += (self.array_a[i] * self.array_b[i])
+                   # print(self.isEmpty(true))
+                   return dp
+               else:
+    1:             return 'arrays must have the same size'
+                   
+    1:     def isEmpty(self, is_a):
+               
+               if is_a:
+                   if len(self.array_a):
+                       return false 
+                   else:
+                       return true
+               else:
+                   if len(self.array_b):
+                       return false
+                   else:
+                       return true
+                       
+               # return len(self.array_a) if is_a else len(self.array_b)
+           
+    1:     def equalSize(self):
+               
+    3:         if(self.getSize(true) ==  self.getSize(false)):
+                   return true
+               
+               else:
+    3:             return false
+                   
+    1:     def getSize(self, is_a):
+               
+    6:         return len(self.array_a) if is_a else len(self.array_b)

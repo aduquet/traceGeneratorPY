@@ -1,0 +1,12 @@
+       
+    1: from arrayoper import *
+       
+    1: a = []
+       # b = ['a',' d', 'v']
+    1: b = [1,2,3]
+       
+    1: myClass = Array_oper(a,b)
+    1: myClass.printArray()
+    1: print('add', myClass.add())
+    1: print('sub', myClass.sub())
+    1: print('dot_product', myClass.dot_product())
