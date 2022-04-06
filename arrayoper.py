@@ -1,6 +1,3 @@
-from ast import Return
-from sympy import false, true
-
 
 class Array_oper(object):
     
@@ -43,24 +40,24 @@ class Array_oper(object):
         
         if is_a:
             if len(self.array_a):
-                return false 
+                return False 
             else:
-                return true
+                return True
         else:
             if len(self.array_b):
-                return false
+                return False
             else:
-                return true
+                return True
                 
         # return len(self.array_a) if is_a else len(self.array_b)
     
     def equalSize(self):
         
-        if(self.getSize(true) ==  self.getSize(false)):
-            return true
+        if(self.getSize(True) ==  self.getSize(False)):
+            return True
         
         else:
-            return false
+            return False
             
     def getSize(self, is_a):
         
